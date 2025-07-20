@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Post Your Book</title>
+</head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--header-->
+    <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #ecf0f1;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    header {
+      max-width: 1200px;
+      margin: 0 auto 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .logo-section img {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+    }
+
+    .logo-section h1 {
+      margin: 0;
+      color: var(--primary-color);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .right-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .signin-button {
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Responsive Part */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .right-section {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      .signin-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-section">
+    <img src="stack-of-books.png" alt="Logo">
+    <h1>2ndhandbook</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="catagories.html">Catagories</a></li>
+      <li><a href="Sellbooks.html">Sellbooks</a></li>
+    </ul>
+  </nav>
+
+  <div class="right-section">
+    <a href="#">Login</a>
+    <a href="#">Contact</a>
+    <button class="signin-button">
+      <i class="fas fa-user"></i> Sign In
+    </button>
+  </div>
+</header>
+    
+
+  <h2 style="text-align:center;">📚 Sell Your Book</h2>
+
+  <form style="max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px;" method="post" action="#">
+
+    <label>Book Title</label><br>
+    <input type="text" name="title" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+<label>Semester</label><br>
+    <input type="text" name="semester" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+    <label>Author</label><br>
+    <input type="text" name="author" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+    <label>Price (BDT)</label><br>
+    <input type="number" name="price" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+    <label>Description</label><br>
+    <textarea name="description" rows="4" style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
+
+    <label>Upload Iamge</label><br>
+   <input type="file" name="bookImage" accept="image/*" required 
+           style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+           <label>Cash on Delivery</label><br>
+    <input type="checkbox" name="cod" checked style="margin-right: 10px;">
+    <button type="submit" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">
+      Post Book
+    </button>
+
+  </form>
+
+</body>
+</html>
